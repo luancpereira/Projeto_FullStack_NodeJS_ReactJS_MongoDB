@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "Luan Carlos Soares Pereira",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mongoose": "^6.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
