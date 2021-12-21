@@ -10,6 +10,7 @@
   "author": "Luan Carlos Soares Pereira",
   "license": "ISC",
   "dependencies": {
+    "date-fns": "^2.27.0",
     "express": "^4.17.2",
     "mongoose": "^6.1.2"
   },
