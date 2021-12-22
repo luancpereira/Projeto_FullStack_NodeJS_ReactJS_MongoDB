@@ -43,7 +43,7 @@ class TaskController {
   async all(req, res) {
     await TaskModel.find({
       macaddress: {
-        $in: req.body.macaddress,
+        $in: req.params.macaddress,
       },
     })
       .sort("when")
