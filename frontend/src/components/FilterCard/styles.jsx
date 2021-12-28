@@ -1,12 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 200px;
-  height: 50px;
-  background: ${(props) => (props.actived ? "#ee6b26" : "#20295f")};
+  width: 260px;
+  height: 60px;
+  background: ${props => props.actived ? '#EE6B26' : '#20295F'};
   padding: 10px;
-  border-radius: 5px;
   cursor: pointer;
+
+  border-radius: 5px;
 
   display: flex;
   flex-direction: column;
@@ -16,14 +17,15 @@ export const Container = styled.div`
     width: 25px;
     height: 25px;
   }
+
   span {
-    color: #fff;
+    color: #FFF;
     font-weight: bold;
     align-self: flex-end;
     font-size: 18px;
   }
 
-  &:hover {
-    background: #ee6b26;
+  &:hover{
+    background: #EE6B26;
   }
-`;
+`

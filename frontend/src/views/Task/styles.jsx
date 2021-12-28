@@ -22,8 +22,8 @@ export const TypeIcons = styled.div`
   }
 
   button {
-    background: none;
     border: none;
+    background: none;
   }
 
   img {
@@ -42,7 +42,7 @@ export const Input = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
+  margin: 20px 0;
 
   span {
     color: #707070;
@@ -55,13 +55,21 @@ export const Input = styled.div`
     border: none;
     border-bottom: 1px solid #ee6b26;
   }
+
+  img {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 90%;
+    bottom: 30px;
+  }
 `;
 
 export const TextArea = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
+  margin: 20px 0;
 
   span {
     color: #707070;
@@ -70,7 +78,6 @@ export const TextArea = styled.div`
 
   textarea {
     font-size: 16px;
-    padding: 15px;
     border: 1px solid #ee6b26;
   }
 `;
@@ -88,7 +95,7 @@ export const Options = styled.div`
     cursor: pointer;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.7;
     }
   }
 
@@ -97,7 +104,7 @@ export const Options = styled.div`
     align-items: center;
     color: #ee6b26;
     font-weight: bold;
-    font-sizer: 18px;
+    font-size: 18px;
   }
 `;
 

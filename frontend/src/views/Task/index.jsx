@@ -12,7 +12,6 @@ import typeIcons from "../../utils/typeicons";
 
 function Task({ match }) {
   const [redirect, setRedirect] = useState(false);
-  const [lateCount, setLateCount] = useState();
 
   const [id, setId] = useState();
   const [type, setType] = useState();
@@ -22,12 +21,6 @@ function Task({ match }) {
   const [date, setDate] = useState();
   const [hour, setHour] = useState();
   const [macaddress, setMacaddress] = useState("11:11:11:11:11:11");
-
-  async function lateVerify() {
-    await api.get(`/task/filter/late/11:11:11:11:11:11`).then((response) => {
-      setLateCount(response.data.length);
-    });
-  }
 
   async function LoadTaskDetails() {
     await api.get(`/task/${match.params.id}`).then((response) => {
@@ -77,8 +70,13 @@ function Task({ match }) {
     }
   }
 
+  async function Remove() {
+    const res = window.confirm("Deseja realmente remover a tarefa?");
+
+    api.delete(`/task/${match.params.id}`).then(() => setRedirect(true));
+  }
+
   useEffect(() => {
-    lateVerify();
     LoadTaskDetails();
   }, []);
 
@@ -87,7 +85,7 @@ function Task({ match }) {
       <S.Container>
         {redirect && <Redirect to="/" />}
 
-        <Header lateCount={lateCount} />
+        <Header />
 
         <S.Form>
           <S.TypeIcons>
@@ -152,7 +150,11 @@ function Task({ match }) {
               />
               <span>CONCLUIDO</span>
             </div>
-            <button type="button">EXCLUIR</button>
+            {match.params.id && (
+              <button type="button" onClick={Remove}>
+                EXCLUIR
+              </button>
+            )}
           </S.Options>
 
           <S.Save>

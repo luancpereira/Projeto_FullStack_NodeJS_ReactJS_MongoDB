@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
   height: 70px;
-  background: #20295f;
-  border-bottom: 5px solid #ee6b26;
+  background: #20295F;
+  border-bottom: 5px solid #EE6B26;
 
   display: flex;
-`;
+`
 
 export const LeftSide = styled.div`
   width: 50%;
@@ -20,7 +20,8 @@ export const LeftSide = styled.div`
     width: 100px;
     height: 40px;
   }
-`;
+ 
+`
 
 export const RightSide = styled.div`
   width: 50%;
@@ -30,31 +31,30 @@ export const RightSide = styled.div`
   justify-content: flex-end;
 
   button {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
 
-  a,
-  button {
-    color: #fff;
+    a, button {
+    color: #FFF;
     font-weight: bold;
     text-decoration: none;
     margin: 0 10px;
+  
 
-    &:hover {
-      color: #ee6b26;
-    }
-  }
+    &:hover{
+      color: #EE6B26;
+    } 
 
-  #notification {
     img {
       width: 25px;
       height: 30px;
     }
+
     span {
-      background: #fff;
-      color: #ee6b26;
+      background: #FFF;
+      color: #EE6B26;
       padding: 3px 7px;
       border-radius: 50%;
       position: relative;
@@ -67,9 +67,14 @@ export const RightSide = styled.div`
     }
   }
 
-  .dividir::after {
+  .dividir::after{
     content: "|";
     margin: 0 10px;
-    color: #fff;
+    color: #FFF;
   }
-`;
+
+  button {
+    font-size: 16px;
+  }
+
+`
