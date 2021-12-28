@@ -10,11 +10,11 @@ function Header({ lateCount, clickNotification }) {
         <img src={logo} alt="Logo" />
       </S.LeftSide>
       <S.RightSide>
-        <a href="#">Inicio</a>
+        <Link to="/">Inicio</Link>
         <span className="dividir" />
-        <a href="#">Nova Tarefa</a>
+        <Link to="/task">Nova Tarefa</Link>
         <span className="dividir" />
-        <a href="#">Sicronizar Celular</a>
+        <Link to="/">Sicronizar Celular</Link>
         <span className="dividir" />
         <button onClick={clickNotification} id="notification">
           <img src={bell} alt="Notificação" />
