@@ -58,7 +58,7 @@ function Home() {
         </S.FilterArea>
 
         <S.Title>
-          <h3>{filterActived == "late" ? "TAREFAS ATRASADAS" : "TAREFAS"}</h3>
+          <h3>{filterActived === "late" ? "TAREFAS ATRASADAS" : "TAREFAS"}</h3>
         </S.Title>
 
         <S.Content>
